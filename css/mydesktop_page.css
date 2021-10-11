@@ -1,0 +1,50 @@
+body {
+  margin: 0px;
+}
+
+#controls {
+  float: left;
+  width: 958px;
+}
+#controls fieldset {
+  float: left;
+  width: 160px;
+  font-size: 10pt;
+}
+#controls fieldset.frame .line {
+  position: relative;
+}
+#controls fieldset.frame input[type=text] {
+  width: 100px;
+}
+#controls fieldset.frame input[type=button] {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+}
+#controls fieldset.frame ul {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+#controls fieldset.transition .line {
+  position: relative;
+  height: 2em;
+  margin: 0px 20px;
+}
+#controls fieldset.transition input[type=text] {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+}
+
+.mydesktop {
+  background-color: #404040;
+}
+
+.myframe-client .content {
+  margin: 20px;
+}

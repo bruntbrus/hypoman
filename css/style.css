@@ -1,0 +1,586 @@
+/* Document */
+html {
+  height: 100%;
+}
+
+/* Body */
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 10pt;
+  margin: 0px;
+  height: 100%;
+  color: white;
+  background-color: black;
+}
+
+/* Hyperlink */
+a {
+  color: #aaf;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff5;
+}
+
+/* Form */
+form, .theme {
+  padding: 5px;
+  border: 1px outset #206040;
+  background-color: #081810;
+}
+form.standard {
+  width: 160px;
+  padding: 1em;
+}
+form.standard input {
+  width: 154px;
+  margin-bottom: 10px;
+}
+fieldset {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Input */
+input, button, textarea {
+  font-size: 10pt;
+  color: white;
+}
+textarea {
+  overflow: auto;
+}
+input[type=button], input[type=submit], input[type=reset], button {
+  padding: 2px 4px;
+  cursor: pointer;
+  background-color: #103020;
+  border: 1px outset #206040;
+  outline-style: none;
+}
+input[type=button].up:focus, input[type=submit].up:focus,
+input[type=reset].up:focus, button.up:focus {
+  color: #ff5;
+}
+input[type=button].down, input[type=submit].down,
+input[type=reset].down, button.down {
+  color: #888;
+  background-color: #040c08;
+  border: 1px inset #206040;
+}
+input[type=text], input[type=password], input[type=email], textarea {
+  padding: 2px;
+  background-color: #020604;
+  border: 1px inset #206040;
+}
+input[disabled], button[disabled], textarea[disabled] {
+  color: #aaa;
+  cursor: default;
+}
+input[type=button][disabled], button[disabled] {
+  background-color: #081810;
+  border-style: solid;
+}
+input[readonly], button[readonly], textarea[readonly] {
+  color: #ccc;
+}
+
+/* Image */
+img {
+  border: none;
+}
+img.icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* List */
+ul.links {
+  list-style-image: url(../images/listitem.png);
+  margin: 16px 0px 0px 0px;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+}
+table caption {
+  color: #8fc;
+  font-size: 11pt;
+}
+table td {
+  padding: 0px;
+}
+table th {
+  padding: 0px;
+  color: #8fc;
+}
+
+/* Generic */
+.error {
+  color: #f11;
+}
+
+/* Main */
+#main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  text-align: center;
+  background: transparent url(../images/head.png) no-repeat bottom;
+}
+
+/* Gradient */
+#top_gradient {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 48px;
+  background: transparent url(../images/gradient-top.png) repeat-x;
+}
+#bottom_gradient {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 48px;
+  background: transparent url(../images/gradient-bottom.png) repeat-x;
+}
+
+/* Page */
+#page {
+  position: relative;
+  overflow: hidden;
+  width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+/* Page header */
+#page_header {
+  position: relative;
+  height: 40px;
+  padding: 4px;
+}
+#page_header img.logo {
+  float: left;
+  width: 160px;
+  height: 40px;
+  margin-right: 20px;
+}
+#page_header div.title {
+  position: relative;
+  top: 16px;
+  left: 0px;
+  float: left;
+  width: 772px;
+  height: 24px;
+  overflow: hidden;
+  font-size: 14pt;
+  text-align: center;
+}
+#page_header div.title span {
+  color: #8fc;
+}
+#page_header div.info {
+  position: relative;
+  top: 24px;
+  left: 0px;
+  float: right;
+  width: 220px;
+  height: 16px;
+  font-size: 9pt;
+  text-align: right;
+}
+#page_header div.info a {
+  margin-left: 1em;
+}
+
+/* Page footer */
+#page_footer {
+  font-size: 8pt;
+  height: 40px;
+  padding: 4px;
+}
+#page_footer span {
+  margin-right: 20px;
+}
+#page_footer div.author {
+  float: left;
+}
+#page_footer div.revised {
+  float: right;
+}
+
+/* Page body */
+#page_body {
+  position: relative;
+}
+#page_body div.content {
+  float: left;
+  position: relative;
+  width: 990px;
+  padding: 10px;
+}
+
+/* Page menu */
+#page_menu {
+  float: left;
+  width: 160px;
+  padding: 10px;
+  font-size: 12pt;
+  /*background-image: url(../images/shade50.png);*/
+}
+#page_menu a {
+  text-decoration: none;
+  outline-style: none;
+}
+#page_menu img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+#page_menu ul {
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+#page_menu li {
+  margin-bottom: 5px;
+  white-space: nowrap;
+  opacity: 0.8;
+}
+#page_menu li.selected {
+  font-weight: bold;
+  opacity: 1;
+}
+#page_menu li.selected img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Anchor */
+div.anchor {
+  clear: both;
+}
+
+/* Decorated box */
+div.decobox {
+  position: relative;
+  padding: 5px;
+}
+div.decobox > div.border {
+  position: absolute;
+}
+div.decobox > div.border.top {
+  left: 12px;
+  right: 12px;
+  top: 0px;
+  height: 8px;
+  background: transparent url(../images/border-horizontal.png) repeat-x;
+}
+div.decobox > div.border.bottom {
+  left: 12px;
+  right: 12px;
+  bottom: 0px;
+  height: 8px;
+  background: transparent url(../images/border-horizontal.png) repeat-x;
+}
+div.decobox > div.border.left {
+  top: 12px;
+  bottom: 12px;
+  left: 0px;
+  width: 8px;
+  background: transparent url(../images/border-vertical.png) repeat-y;
+}
+div.decobox > div.border.right {
+  top: 12px;
+  bottom: 12px;
+  right: 0px;
+  width: 8px;
+  background: transparent url(../images/border-vertical.png) repeat-y;
+}
+div.decobox > div.border.top_left {
+  top: 0px;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+  background: transparent url(../images/border-top-left.png) no-repeat;
+}
+div.decobox > div.border.top_right {
+  top: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background: transparent url(../images/border-top-right.png) no-repeat;
+}
+div.decobox > div.border.bottom_left {
+  bottom: 0px;
+  left: 0px;
+  width: 12px;
+  height: 12px;
+  background: transparent url(../images/border-bottom-left.png) no-repeat;
+}
+div.decobox > div.border.bottom_right {
+  bottom: 0px;
+  right: 0px;
+  width: 12px;
+  height: 12px;
+  background: transparent url(../images/border-bottom-right.png) no-repeat;
+}
+
+/* Start page */
+#start_page p {
+  width: 75%;
+  text-align: justify;
+}
+
+/* Gallery thumb page */
+#gallery_thumb_page .thumb {
+  float: left;
+  width: 180px;
+  margin: 0 1em 1em 0;
+  font-size: 0.8em;
+  text-align: center;
+}
+#gallery_thumb_page .thumb div {
+  position: relative;
+  width: 160px;
+  height: 120px;
+  margin: auto;
+  overflow: hidden;
+  background-color: black;
+  border: 1px solid gray;
+}
+#gallery_thumb_page .thumb div:hover {
+  border-color: #ff4;
+}
+#gallery_thumb_page .thumb img {
+  display: block;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+/* Gallery view page */
+#gallery_view_page img.fullsize {
+  display: block;
+  border: thin solid gray;
+}
+
+/* Info page */
+#info_page th {
+  padding-right: 1em;
+  font-weight: normal;
+}
+
+/* Link page */
+#links_page table {
+  margin-bottom: 16px;
+}
+#links_page caption {
+  text-align: left;
+  border-bottom: 1px solid #666;
+}
+#links_page th {
+  font-weight: normal;
+  text-align: left;
+  padding-right: 20px;
+}
+
+/* Calculator page */
+#calculator_page form {
+  position: relative;
+  float: left;
+  z-index: 1;
+}
+#calculator_page textarea {
+  display: block;
+  font-family: monospace;
+  font-size: 11pt;
+}
+#calculator_page textarea[name=expression] {}
+#calculator_page textarea[name=answer] {
+  margin-top: 5px;
+}
+#calculator_page textarea[name=memory] {
+  margin-top: 5px;
+}
+#calculator_page div.buttons {
+  margin-top: 5px;
+}
+#calculator_page div.buttons input {
+  width: 64px;
+}
+#calculator_page input[name=help] {
+  float: right;
+}
+#calculator_page div.help {
+  position: relative;
+  float: left;
+  overflow: auto;
+  width: 360px;
+  height: 200px;
+  padding: 10px;
+  font-size: 9pt;
+  visibility: hidden;
+  background-color: black;
+  border: 1px solid #888;
+}
+#calculator_page div.help th {
+  font-family: monospace;
+  padding-right: 10px;
+}
+
+/* Canvas page */
+#canvas_page canvas {
+  float: left;
+  margin: 20px;
+}
+
+/* Canvas anim page */
+#canvas_anim_page canvas {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+}
+
+/* Editor page */
+#editor_page form {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+#editor_page div.toolbar {
+  position: relative;
+  margin-bottom: 5px;
+}
+#editor_page div.options {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+#editor_page div.statusbar {
+  height: 16px;
+  margin-top: 5px;
+}
+#editor_page div.statusbar span:last-child {
+  float: right;
+}
+#editor_page textarea {
+  width: 660px;
+  height: 324px;
+}
+
+/* MineField page */
+#minefield_page form {
+  float: left;
+  padding: 0px;
+}
+#minefield_page div.panel > span {
+  margin-right: 1em;
+}
+#minefield_page div.panel > span:last-child {
+  float: right;
+  margin-right: 0px;
+}
+#minefield_page div.control {
+  padding: 5px;
+  border-bottom: 1px solid #666;
+}
+#minefield_page div.board {
+  position: relative;
+  overflow: auto;
+  width: 511px;
+  height: 341px;
+  padding: 2px;
+}
+#minefield_page div.status {
+  height: 16px;
+  padding: 2px;
+  border-top: 1px solid #666;
+}
+#minefield_page input[name=newField] {
+  float: right;
+}
+#minefield_page table.minefield {
+  position: absolute;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 1px;
+  background-color: #060;
+}
+#minefield_page table.minefield td {
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  cursor: default;
+  color: white;
+  background-color: #0c0;
+}
+#minefield_page table.minefield td.visible {
+  background-color: transparent;
+}
+#minefield_page table.minefield td.flagged {
+  color: black;
+  font-weight: bold;
+}
+#minefield_page table.minefield td.mine {
+  color: red;
+  font-weight: bold;
+}
+
+/* Packer page */
+#packer_page form {
+  float: left;
+  clear: left;
+  margin-bottom: 1em;
+  padding: 0px;
+  font-size: 11pt;
+}
+#packer_page textarea {
+  border-left-style: none;
+  border-right-style: none;
+}
+#packer_page label {
+  margin-right: 1em;
+}
+#packer_page .title {
+  margin: 4px 0px;
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+}
+#packer_page .panel {
+  height: 24px;
+  padding: 4px;
+  color: white;
+}
+#packer_page .left {
+  float: left;
+}
+#packer_page .right {
+  float: right;
+}
+
+/* Password page */
+#password_page form {
+  float: left;
+}
+#password_page label {
+  display: block;
+}
+#password_page div.input {
+  float: left;
+}
+#password_page div.output {
+  float: left;
+  margin-left: 10px;
+}
+#password_page textarea {
+  font-size: 12pt;
+  color: white;
+  line-height: 16pt;
+}

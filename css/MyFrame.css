@@ -1,0 +1,109 @@
+/*
+ * Style:  MyFrame
+ * Author: Tomas Enarsson
+ */
+
+/* Container */
+.myframe {
+  position: absolute;
+  text-align: left;
+  color: black;
+  background-color: #c0c0c0;
+  border: 1px solid black;
+}
+
+/* Head */
+.myframe-head {
+  position: relative;
+  overflow: hidden;
+  height: 20px;
+  padding: 0px 4px;
+  font-size: 11pt;
+  font-weight: bold;
+  cursor: default;
+  background-color: #a0a0e0;
+  white-space: nowrap;
+}
+.myframe-head > img {
+  width: 16px;
+  height: 16px;
+  margin: 2px 4px 2px 0px;
+  vertical-align: middle;
+}
+.myframe.disabled .myframe-head {
+  background-color: #8080a0;
+}
+
+/* Controls */
+.myframe-controls {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 0px 2px;
+  background-color: inherit;
+}
+.myframe-controls > div {
+  float: left;
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+}
+.myframe-controls > .minimize {
+  background: transparent url('images/minimize.png') no-repeat center;
+}
+.myframe-controls > .maximize {
+  background: transparent url('images/maximize.png') no-repeat center;
+}
+.myframe-controls > .close {
+  background: transparent url('images/close.png') no-repeat center;
+}
+.myframe-controls > div:hover {
+  background-color: #b0b0f0;
+}
+
+/* Contents */
+.myframe-contents {
+  position: relative;
+  overflow: hidden;
+  margin: 0px 4px 4px 4px;
+  border: 1px solid #808080;
+}
+
+/* Client */
+.myframe-client {
+  position: relative;
+  overflow: auto;
+  background-color: #f0f0f0;
+}
+
+/* Statusbar */
+.myframe-statusbar {
+  position: relative;
+  overflow: hidden;
+  height: 17px;
+  font-size: 10pt;
+  white-space: nowrap;
+  background-color: #f0f0f0;
+  border-top: 1px solid #808080;
+}
+
+/* Resizer */
+.myframe-resizer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  background-color: #8080f0;
+}
+
+/* Cover */
+.myframe-cover {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  cursor: default;
+}

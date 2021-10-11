@@ -1,0 +1,41 @@
+/*
+ * Style:  DownRoller
+ * Author: Tomas Enarsson
+ */
+
+/* Container */
+.down-roller {
+  background-color: #f0f0f0;
+}
+
+/* Section head */
+.down-roller * .head {
+  height: 20px;
+  padding: 1px;
+  font-size: 12pt;
+  text-align: center;
+  color: black;
+  background-color: #c0c0f0;
+  overflow: hidden;
+  cursor: default;
+  border: 1px solid #a0a0c0;
+}
+.down-roller * .head:hover {
+  background-color: #b0b0e0;
+}
+.down-roller > .expanded > .head {
+  font-weight: bold;
+}
+
+/* Section view */
+.down-roller * .view {
+  position: relative;
+  overflow: hidden;
+}
+.down-roller * .view > .body {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: left;
+}

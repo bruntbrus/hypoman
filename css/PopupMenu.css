@@ -1,0 +1,65 @@
+/*
+ * Style:  PopupMenu
+ * Author: Tomas Enarsson
+ */
+
+/* Menu */
+.popup-menu {
+  position: absolute;
+  overflow: auto;
+  padding: 1px;
+  z-index: 100;
+  max-width: 236px;
+  max-height: 476px;
+  cursor: default;
+  font-size: 10pt;
+  color: black;
+  background-color: #f0f0f0;
+  border: 1px solid #808080;
+}
+
+/* Menu item */
+.popup-menu-item {
+  padding: 0em 1em;
+}
+.popup-menu-item.selected {
+  color: white;
+  background-color: #8080c0;
+}
+.popup-menu-item.disabled {
+  color: #a0a0a0;
+}
+
+/* Separator */
+.popup-menu-separator {
+  padding-top: 2px;
+  border-bottom: 1px solid #a0a0a0;
+  margin-bottom: 3px;
+}
+
+/* Menubar */
+.popup-menubar {
+  position: relative;
+  height: 17px;
+  cursor: default;
+  font-size: 10pt;
+  color: black;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #808080;
+}
+
+/* Menubar item */
+.popup-menubar-item {
+  padding: 0px 4px;
+  height: 100%;
+}
+.popup-menubar-item.selected {
+  color: white;
+  background-color: #8080c0;
+}
+.popup-menubar-item.left {
+  float: left;
+}
+.popup-menubar-item.right {
+  float: right;
+}

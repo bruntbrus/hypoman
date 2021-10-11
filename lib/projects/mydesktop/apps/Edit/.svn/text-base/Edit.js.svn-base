@@ -1,0 +1,84 @@
+/*
+ * App:     Edit
+ * Author:  Tomas Enarsson
+ * About:   Simple text editor for MyDesktop.
+ * Depends: common.js, MyFrame.js, MyDesktop.js, PopupMenu.js
+ */
+
+// Construct
+function Edit(desktop, width, height) {
+	var x = (desktop.clientWidth  - width)  / 2;
+	var y = (desktop.clientHeight - height) / 2;
+	var frame = new MyFrame("Edit", "Edit", Edit.path + "icon.png", x, y, width, height);
+	frame.addMenubar();
+	frame.addStatusbar();
+	frame.resizeContents();
+	frame.setResizable();
+	var menuFile = new PopupMenu("File");
+	menuFile.addItem("New",  "FileNew",  true, "Empty text area");
+	menuFile.addItem("Open", "FileOpen", true, "Open sesame");
+	menuFile.addItem("Save", "FileSave", true, "Save yourself");
+	menuFile.addSeparator();
+	menuFile.addItem("Exit", "FileExit", true, "Let me out");
+	var menuHelp = new PopupMenu("Help");
+	menuHelp.addItem("About", "HelpAbout", true, "Who cares?");
+	frame.addMenu(menuFile);
+	frame.addMenu(menuHelp);
+	var textArea = common.createElement("textarea", {
+		"style" : "display: block; overflow: auto; " +
+			"margin: 0px; padding: 2px; border-style: none;"
+	});
+	frame.client.style.overflow = "hidden";
+	frame.client.appendChild(textArea);
+	this.onResize(frame);
+
+	desktop.openFrame(frame, this);
+}
+
+// Messages
+Edit.messages = {
+	FileNew   : "",
+	FileOpen  : "Do you have a can opener?",
+	FileSave  : "Please save me, oh great hero.",
+	FileExit  : "You can run but you can't hide!",
+	HelpAbout : "Let me tell you the story of my life..."
+};
+
+// Init
+Edit.init = function(name, url) {
+	this.path = url.substring(0, url.lastIndexOf("/") + 1);
+};
+
+// Run
+Edit.run = function(desktop, args) {
+	var width  = 480;
+	var height = 320;
+	if (args) {
+		if (args.width)  { width  = args.width; }
+		if (args.height) { height = args.height; }
+	}
+	return (new this(desktop, width, height));
+};
+
+// On destroy
+Edit.prototype.onDestroy = function(frame) {
+	return true;
+};
+
+// On focus
+Edit.prototype.onFocus = function(frame) {
+	frame.client.firstChild.focus();
+};
+
+// On resize
+Edit.prototype.onResize = function(frame) {
+	var style    = frame.client.firstChild.style;
+	style.width  = (frame.clientWidth  - 4) + "px";
+	style.height = (frame.clientHeight - 4) + "px";
+};
+
+// On action
+Edit.prototype.onAction = function(frame, action) {
+	var area = frame.client.firstChild;
+	area.value = this.constructor.messages[action];
+};

@@ -1,0 +1,66 @@
+/*
+ * App:     HTMLViewer
+ * Author:  Tomas Enarsson
+ * About:   Simple viewer for HTML-files.
+ * Depends: common.js, browser.js, MyFrame.js, MyDesktop.js
+ */
+
+// Construct
+function HTMLViewer(desktop, url, width, height) {
+	var x = (desktop.clientWidth  - width)  / 2;
+	var y = (desktop.clientHeight - height) / 2;
+	var frame = new MyFrame("HTMLViewer", url, null, x, y, width, height);
+	frame.setResizable();
+	var page = common.createElement("div", {
+		"style" : "margin: 1em;"
+	});
+	page.innerHTML = "<p>Loading content...</p>";
+	common.load("text/html", url, 10000, this, function(request) {
+		var status = request.status;
+		if (request.readyState != 4) {
+			page.innerHTML = "<p>Timeout: 10s</p>";
+		} else if (status == 0 || status == 200 || status == 304) {
+			var html  = request.responseText;
+			var match = html.match(/<title>(.*)<\/title>/i);
+			if (match && match.length > 1) {
+				var title = match[1];
+				frame.setTitle(title);
+				desktop.setFrameButtonTitle(frame, title);
+			}
+			page.innerHTML = html;
+		} else {
+			page.innerHTML = "<p>" + status + " - " + request.statusText + "</p>";
+		}
+	});
+	this.frame = frame;
+	this.url   = url;
+	frame.client.style.backgroundColor = "white";
+	frame.client.appendChild(page);
+	desktop.openFrame(frame, this);
+}
+
+// Run
+HTMLViewer.run = function(desktop, args) {
+	var viewers = desktop.getRunners(this);
+	if (viewers) for (var index = 0; index < viewers.length; index++) {
+		var viewer = viewers[index];
+		if (viewer.url == args.url) {
+			desktop.frameToFront(viewer.frame);
+			return viewer;
+		}
+	}
+	var url    = null;
+	var width  = 480;
+	var height = 400;
+	if (args) {
+		if (args.url    != null) { url    = args.url; }
+		if (args.width  != null) { width  = args.width; }
+		if (args.height != null) { height = args.height; }
+	}
+	return (url != null ? new this(desktop, url, width, height) : null);
+};
+
+// Destroy
+HTMLViewer.prototype.destroy = function() {
+	this.frame = null;
+};

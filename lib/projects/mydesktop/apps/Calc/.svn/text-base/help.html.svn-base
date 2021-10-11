@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Calc: help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="author" content="Tomas Enarsson">
+</head>
+<body>
+
+<h2>Användning</h2>
+<p>
+	Kalkylatorn är baserad på JavaScript. Den beräknar värdet av det
+	matematiska uttrycket och visar resultatet i svarsrutan. Alla
+	egendefinierade variabler visas med namn och värde i en överskådlig
+	lista. De datatyper som stöds är: tal, strängar, boolesker, vektorer och
+	reguljära uttryck.
+</p>
+<h2>Konstanter</h2>
+<table style="border-spacing: 2em 0em;">
+	<tr><td><code>ans  </code></td><td>Svaret från den senaste beräkningen.</td></tr>
+	<tr><td><code>null </code></td><td>Inget värde.</td></tr>
+	<tr><td><code>true </code></td><td>Sant.</td></tr>
+	<tr><td><code>false</code></td><td>Falskt.</td></tr>
+	<tr><td><code>pi   </code></td><td>Gamla hederliga (och mytomspunna) pi.</td></tr>
+	<tr><td><code>e    </code></td><td>Eulers konstant.</td></tr>
+	<tr><td><code>ln2  </code></td><td>Naturliga logaritmen av 2.</td></tr>
+	<tr><td><code>ln10 </code></td><td>Naturliga logaritmen av 10.</td></tr>
+	<tr><td><code>sr2  </code></td><td>Roten ur 2.</td></tr>
+	<tr><td><code>phi  </code></td><td>Gyllene snittet.</td></tr>
+	<tr><td><code>c    </code></td><td>Ljusets hastighet i vakuum.</td></tr>
+</table>
+<h2>Funktioner</h2>
+<table style="border-spacing: 2em 0em;">
+	<tr><td><code>abs(x)     </code></td><td>Absolutbelopp.</td></tr>
+	<tr><td><code>acos(x)    </code></td><td>Arcus cosinus.</td></tr>
+	<tr><td><code>asin(x)    </code></td><td>Arcus sinus.</td></tr>
+	<tr><td><code>atan(x)    </code></td><td>Arcus tangens.</td></tr>
+	<tr><td><code>bool(x)    </code></td><td>Omvandlar till sant eller falskt.</td></tr>
+	<tr><td><code>ceil(x)    </code></td><td>Avrundar uppåt till närmaste heltal.</td></tr>
+	<tr><td><code>cos(x)     </code></td><td>Cosinus.</td></tr>
+	<tr><td><code>deg(x)     </code></td><td>Konverterar radianer till grader.</td></tr>
+	<tr><td><code>dist(a,b)  </code></td><td>Avståndet mellan a och b.</td></tr>
+	<tr><td><code>exp(x)     </code></td><td>Beräknar e upphöjt till x.</td></tr>
+	<tr><td><code>fac(n)     </code></td><td>Fakultet.</td></tr>
+	<tr><td><code>floor(x)   </code></td><td>Avrundar nedåt till närmaste heltal.</td></tr>
+	<tr><td><code>log(x)     </code></td><td>Naturlig logaritm.</td></tr>
+	<tr><td><code>log2(x)    </code></td><td>Logaritm med basen 2.</td></tr>
+	<tr><td><code>log10(x)   </code></td><td>Logaritm med basen 10.</td></tr>
+	<tr><td><code>logb(x,y)  </code></td><td>Logaritm med basen x.</td></tr>
+	<tr><td><code>max(...)   </code></td><td>Största värde.</td></tr>
+	<tr><td><code>mean(...)  </code></td><td>Medelvärde.</td></tr>
+	<tr><td><code>min(...)   </code></td><td>Minsta värde.</td></tr>
+	<tr><td><code>num(x)     </code></td><td>Omvandlar till tal.</td></tr>
+	<tr><td><code>pow(x,y)   </code></td><td>Beräknar x upphöjt till y.</td></tr>
+	<tr><td><code>rad(x)     </code></td><td>Konverterar grader till radianer.</td></tr>
+	<tr><td><code>rnd()      </code></td><td>Slumpmässigt tal mellan 0 och 1.</td></tr>
+	<tr><td><code>rndint(a,b)</code></td><td>Slumpmässigt heltal inom [a-b].</td></tr>
+	<tr><td><code>round(x)   </code></td><td>Avrundar x till ett heltal.</td></tr>
+	<tr><td><code>sin(x)     </code></td><td>Sinus.</td></tr>
+	<tr><td><code>sqrt(x)    </code></td><td>Roten ur x.</td></tr>
+	<tr><td><code>str(x)     </code></td><td>Omvandlar till sträng.</td></tr>
+	<tr><td><code>tan(x)     </code></td><td>Tangens.</td></tr>
+</table>
+<p><em>Tomas Enarsson</em></p>
+
+</body>
+</html>

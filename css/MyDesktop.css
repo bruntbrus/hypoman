@@ -1,0 +1,95 @@
+/*
+ * Style:  MyDesktop
+ * Author: Tomas Enarsson
+ */
+
+/* Container */
+.mydesktop {
+  position: relative;
+  overflow: hidden;
+  font-size: 10pt;
+  color: black;
+  background-image: url('images/wallpaper.jpg');
+}
+
+/* Panel */
+.mydesktop-panel {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 100%;
+  z-index: 1000;
+  background: transparent url("images/shade50.png");
+}
+.mydesktop-panel > .down-roller {
+  overflow: auto;
+  background-color: transparent;
+}
+.mydesktop-panel * .section.menu a {
+  margin: 2px;
+  color: aqua;
+  outline: none;
+}
+.mydesktop-panel * .section.menu a:visited {
+}
+.mydesktop-panel * .section.menu .body {
+  padding: 2px;
+}
+.mydesktop-panel * .section.list .button {
+  margin: 2px;
+  padding: 1px;
+  text-align: center;
+  background-color: #f0f0f0;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mydesktop-panel * .section.list .button.minimized {
+  background-color: #a0a0a0;
+}
+.mydesktop-panel * .section.list .button.selected {
+  background-color: yellow;
+}
+.mydesktop-panel > .status {
+  height: 28px;
+  padding: 2px;
+  color: white;
+  font-size: 8pt;
+}
+
+/* Client */
+.mydesktop-client {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  height: 100%;
+}
+.mydesktop-client > .myframe {
+  /*z-index: 1;*/
+}
+
+/* Icon */
+.mydesktop-icon {
+  float: left;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: 8px 0px 0px 8px;
+  padding: 4px;
+  text-align: center;
+  cursor: default;
+  background-image: url('images/shade25.png');
+}
+.mydesktop-icon > img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+.mydesktop-icon > div {
+  margin-top: 2px;
+  font-size: 9pt;
+  color: white;
+}
